@@ -138,7 +138,7 @@ describe('SignUp Controller', () => {
 })
 
 describe('SignUp Controller', () => {
-  test('should return 400 if and invalid email is provided', () => {
+  test('should return 400 if invalid email is provided', () => {
     const { sut, emailValidatorStub } = makeSut()
 
     jest.spyOn(emailValidatorStub, 'isValid').mockReturnValueOnce(false)
@@ -159,7 +159,7 @@ describe('SignUp Controller', () => {
 })
 
 describe('SignUp Controller', () => {
-  test('should call EmailValidator with correect email', () => {
+  test('should call EmailValidator with correct email', () => {
     const { sut, emailValidatorStub } = makeSut()
 
     const isValidSpy = jest.spyOn(emailValidatorStub, 'isValid')
